@@ -13,6 +13,7 @@
   <nav>
     <div class="nav-container">
       <h1 class="logo">Portfolio</h1>
+      <div class="menu-toggle">&#9776;</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -97,6 +98,13 @@
   <footer>
     <p>© 2025 Manimaran R. All Rights Reserved.</p>
   </footer>
+  <script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
