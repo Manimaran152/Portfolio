@@ -13,6 +13,33 @@ body {
 }
 
 /* Navigation */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: #010a36;
+    padding-top: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 nav {
   padding: 20px;
 }
