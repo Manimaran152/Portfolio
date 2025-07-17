@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <h1 class="logo">Portfolio</h1>
+
+      <!-- Menu toggle for mobile -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="home-content">
+      <img src="Mani.jpeg" alt="Your Photo" class="profile-img" />
+      <div class="text">
+        <h1>Hi, I'm</h1>
+        <h1>Manimaran R</h1>
+        <p>B.E. Computer Science and Engineering</p>
+        <p>Kongunadu College of Engineering and Technology</p>
+        <div class="buttons">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p class="about-text">
+      Hello! I'm Manimaran R, a Computer Science and Engineering student at Kongunadu College of Engineering and Technology. I’m passionate about Data analytics, focusing on creating innovative solutions to real-world challenges. With strong skills in Python, Java, HTML, CSS, Power BI, and Canva, I'm continuously expanding my knowledge in web designing and data analytics. Outside of coding, I enjoy exploring the latest tech trends and analytics.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-bar">
+      <h4>Java Programming</h4>
+      <h4>Python Programming</h4>
+      <h4>HTML</h4>
+      <h4>CSS</h4>
+      <h4>Power BI</h4>
+      <h4>Canva</h4>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects"> 
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Predicting Criminal Activities</h3>
+      <p>The project predicts crime in districts using multi-density crime hotspot analysis.</p>
+      <a href="https://predict-the-criminal-activities.netlify.app/" class="btn" target="_blank">View</a>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">2026 - B.E. in Computer Science and Engineering</div>
+      <div class="timeline-item">2023 - Diploma in CSE</div>
+      <div class="timeline-item">2021 - Higher Secondary (12th)</div>
+      <div class="timeline-item">2019 - Secondary School (10th)</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="#" method="post">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="subject" placeholder="Subject" required />
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div class="contact-links">
+      <a href="tel:+91 7868094133">Phone</a>
+      <a href="mailto:manimaranselvi2004@gmail.com">Gmail</a>
+      <a href="https://www.linkedin.com/in/manimaran-r-42a969269/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Manimaran152" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Manimaran R. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu on mobile after link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+        }
+      });
+    });
+
+  const form = document.querySelector(".contact-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent actual submission (for now)
+    alert("Your message has been sent! (Note: backend not connected yet)");
+    form.reset();
+  });
+
+  </script>
+</body>
+</html>

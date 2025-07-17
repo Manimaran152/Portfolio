@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #010a36;
+  color: #fdfcfc;
+  padding: 20px;
+}
+
+/* Navigation */
+nav {
+  padding: 20px;
+}
+
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  color: white;
+}
+
+.nav-links {
+  font-size: 18px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #ffcccb;
+}
+
+/* Menu toggle icon */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Home */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.home-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+   border: 5px solid #fdfcfc;
+  border-radius: 15%;
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+}
+
+.text {
+  max-width: 500px;
+}
+
+.text h1 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.text p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.buttons .btn {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 12px 20px;
+  background: #3e5ff1;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.buttons .btn:hover {
+  background: #0097a7;
+}
+
+/* Sections */
+section {
+  margin-top: 60px;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0 20px;
+  text-align: justify;
+}
+
+/* Skills */
+.skill-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-bar h4 {
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Projects */
+.project {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(252, 250, 250, 0.1);
+  border-radius: 10px;
+  line-height: 30px;
+}
+
+.project h3 {
+  margin-bottom: 10px;
+}
+
+.project .btn {
+  text-decoration: none;
+    color: red;
+}
+
+/* Education */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 25px;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+/* Contact */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-links a {
+  text-decoration: none;
+  background: #316dee;
+  padding: 15px 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fdfcfc;
+  color: #333;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: #010a36;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .text h1 {
+    font-size: 22px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .timeline-item {
+    width: 95%;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .logo {
+    font-size: 26px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Contact Form Styling */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form .btn {
+  background: #3e5ff1;
+  color: white;
+  font-size: 16px;
+  padding: 12px 0;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 8px;
+}
+
+.contact-form .btn:hover {
+  background: #0097a7;
+}
